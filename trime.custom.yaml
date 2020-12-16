@@ -1,0 +1,73 @@
+patch:
+
+  "preset_keyboards/eng": #英文键盘，用默认风格的qwery0键盘将模式变化变成了切换回九宫格中文。
+    __include: trime.yaml:/preset_keyboards/qwerty0
+    __patch:
+      "keys/@40/click": Keyboard_ch
+    ascii_mode: 1
+    lock: false
+
+  "preset_keyboards/luna_pinyin_jiugong": # 九宫格键盘
+    ascii_mode: 0
+    author: "Jason Huang : hjianhao@hotmail.com"
+    name: 朙月九宮键盘
+    height: 58
+    horizontal_gap: 5
+    vertical_gap: 0
+    key_hint_offset_x: 0
+    key_hint_offset_y: 0
+    key_press_offset_x: 2
+    key_press_offset_y: 2
+    key_symbol_offset_x: 0
+    key_symbol_offset_y: 0
+    key_text_offset_x: 0
+    key_text_offset_y: 0
+    width: 23
+    keys:
+    #第一行
+      - {key_back_color: 0x00, width: 100, height: 7}
+      - {click: ",", long_click: ";", key_back_color: 0x00, width: 15}
+      - {click: 1, label: "'", composing: "'", long_click: Zdic, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+      - {click: 2, label: abc, long_click: select_all, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+      - {click: 3, label: def, long_click: "+", swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+      - {click: BackSpace, long_click: "-", width: 16}
+    #第二行
+      - {key_back_color: 0x00, width: 100, height: 7}
+      - {click: ".", long_click: ":", key_back_color: 0x00, width: 15, swipe_left: Left, swipe_right: Right}
+      - {click: 4, label: ghi, long_click: Home, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+      - {click: 5, label: jkl, long_click: Escape, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+      - {click: 6, label: mno, long_click: End, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+      - {click: "@", composing: Up, width: 16, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right, long_click: "#"}
+    #第三行
+      - {key_back_color: 0x00, width: 100, height: 7}
+      - {click: "?", long_click: "!", key_back_color: 0x00, width: 15}
+      - {click: 7, label: pqrs, long_click: copy, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+      - {click: 8, label: tuv, long_click: paste, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+      - {click: 9, label: wxyz, long_click: cut, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+      - {click: Keyboard_eng, composing: Down, long_click: '"', width: 16, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+    #第四行
+      - {key_back_color: 0x00, width: 100, height: 7}
+      - {click: Keyboard_symbols, long_click: Keyboard_number, width: 15, height: 50}
+      - {click: Menu, long_click: Theme_settings, width: 15, swipe_up: Up, swipe_down: Down}
+      - {click: space, key_back_color: Skyblue, width: 38, swipe_up: Up, swipe_down: Down, long_click: Settings}      
+      - {click: "0", long_click: "(){Left}", width: 16, swipe_left: "(", swipe_right: ")", swipe_up: Up, swipe_down: Down}
+      - {click: Return, long_click: IME_switch, width: 16, key_back_color: Skyblue, swipe_up: Up, swipe_down: Down}
+      - {key_back_color: 0x00, width: 100, height: 3}
+
+  "preset_keys/Keyboard_eng":
+    label: "英文"
+    select: eng
+    send: Eisu_toggle
+
+  "preset_keys/Keyboard_ch":
+    label: "中文"
+    select: luna_pinyin_jiugong
+    send: Eisu_toggle  
+
+  "style/keyboards":
+    - .default
+    - eng
+    - default
+    - number
+    - symbols
+  

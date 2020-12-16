@@ -1,0 +1,11 @@
+---
+name: custom
+version: "2020.12.14"
+sort: by_weight
+use_preset_vocabulary: true
+import_tables:
+  - luna_pinyin
+  - sougo-standard
+  - sougo-computer
+  - sougo-shenzhen
+...

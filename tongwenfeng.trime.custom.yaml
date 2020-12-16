@@ -1,0 +1,53 @@
+patch: 
+  "preset_keyboards/luna_pinyin_jiugong":
+    ascii_mode: 0
+    author: "Jason Huang : hjianhao@hotmail.com"
+    name: 朙月九宮键盘
+    height: 58
+    horizontal_gap: 
+    vertical_gap: 0
+    key_hint_offset_x: 0
+    key_hint_offset_y: 0
+    key_press_offset_x: 2
+    key_press_offset_y: 2
+    key_symbol_offset_x: 0
+    key_symbol_offset_y: 0
+    key_text_offset_x: 0
+    key_text_offset_y: 0
+    width: 23
+    keys:
+    #第一行
+      - {key_back_color: bh1, key_text_color: th1, width: 100, height: 7}
+      - {click: ",", long_click: ";", key_back_color: keyboard_back_color, key_text_color: text_color, width: 15}
+      - {click: 1, label: "'", composing: "'", long_click: Zdic, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+      - {click: 2, label: abc, long_click: select_all, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+      - {click: 3, label: def, long_click: "+", swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+      - {click: BackSpace, long_click: "-", width: 16}
+    #第二行
+      - {key_back_color: bh2, key_text_color: th2, width: 100, height: 7}
+      - {click: ".", long_click: ":", key_back_color: keyboard_back_color, key_text_color: text_color, width: 15, swipe_left: Left, swipe_right: Right}
+      - {click: 4, label: ghi, long_click: Home, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+      - {click: 5, label: jkl, long_click: Escape, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+      - {click: 6, label: mno, long_click: End, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+      - {click: "@", composing: Up, width: 16, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right, long_click: "#"}
+    #第三行
+      - {key_back_color: bh3, key_text_color: th3, width: 100, height: 7}
+      - {click: "?", long_click: "!", key_back_color: keyboard_back_color, key_text_color: text_color, width: 15}
+      - {click: 7, label: pqrs, long_click: copy, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+      - {click: 8, label: tuv, long_click: paste, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+      - {click: 9, label: wxyz, long_click: cut, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+      - {click: Keyboard_eng, composing: Down, long_click: '"', width: 16, swipe_up: Up, swipe_down: Down, swipe_left: Left, swipe_right: Right}
+    #第四行
+      - {key_back_color: bh4, key_text_color: th4, width: 100, height: 7}
+      - {click: Keyboard_symbols, long_click: Keyboard_number, width: 15, height: 50}
+      - {click: Menu, long_click: Theme_settings, width: 15, swipe_up: Up, swipe_down: Down}
+      - {click: space, key_back_color: Skyblue, width: 38, swipe_up: Up, swipe_down: Down, long_click: Settings}      
+      - {click: "0", long_click: "(){Left}", width: 16, swipe_left: "(", swipe_right: ")", swipe_up: Up, swipe_down: Down}
+      - {click: Return, long_click: IME_switch, width: 16, key_back_color: Skyblue, swipe_up: Up, swipe_down: Down}
+      - {key_back_color: 0x00, width: 100, height: 3}
+     
+
+  "preset_keys/Keyboard_eng":
+    label: "英文"
+    select: letter
+    send: Eisu_toggle
